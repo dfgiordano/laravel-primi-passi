@@ -51,5 +51,13 @@ Route::get('/', function () {
 });
 
 Route::get('/contatti', function () {
-    return view('contatti') ;
+    $data = [
+        "contatti_links" => [
+            "indirizzo" => "Indirizzo : " . "Via Nazionale n21, Roma 22222",
+            "email" => "Email : " . "fabbricadimanga@manga.com",
+            "link coordinate google" => "Coordinate : " . "41°24'12.2'N 2°10'26.5'E",
+            "numero" => "Numero : " . "02345678910",
+        ]
+        ];
+    return view('contatti',$data) ;
 });
